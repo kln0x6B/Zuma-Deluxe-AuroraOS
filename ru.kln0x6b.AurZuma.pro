@@ -5,7 +5,6 @@ TARGET = ru.kln0x6b.AurZuma
 
 CONFIG += \
     auroraapp \
-    auroraapp_i18n \
     c++14
 
 QT += multimedia
@@ -80,7 +79,3 @@ DISTFILES += \
     LICENSE \
 
 AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
-
-TRANSLATIONS += \
-    translations/$${TARGET}.ts \
-    translations/$${TARGET}-ru.ts \

@@ -11,8 +11,8 @@ CoverBackground {
 
     CoverTemplate {
         objectName: "applicationCover"
-        primaryText: playing ? app.score.toString() : qsTr("Zuma")
-        secondaryText: playing ? app.levelName : qsTr("Deluxe HD")
+        primaryText: playing ? app.score.toString() : "Zuma"
+        secondaryText: playing ? app.levelName : "Deluxe HD"
         icon {
             source: Qt.resolvedUrl("../icons/AurZuma.png")
             sourceSize { width: icon.width; height: icon.height }
