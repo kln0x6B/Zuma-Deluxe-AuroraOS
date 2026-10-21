@@ -1,0 +1,17 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.kln0x6b.AurZuma
+Exec=/usr/bin/ru.kln0x6b.AurZuma
+Name=Zuma on Aurora OS
+Name[ru]=Zuma на Аврора ОС
+
+[X-Application]
+Permissions=Audio
+OrganizationName=ru.kln0x6b
+ApplicationName=AurZuma
+ExecDBus=/usr/bin/ru.kln0x6b.AurZuma
+
+[X-Aurora-Application]
+Orientation=Landscape;LandscapeInverted
+IconMode=Crop
