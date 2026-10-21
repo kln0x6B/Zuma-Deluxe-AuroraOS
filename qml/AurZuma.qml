@@ -10,6 +10,8 @@ ApplicationWindow {
 
     property string levelName
     property int score: -1
+    property string levelTitle
+    property url thumbnail
 
     objectName: "applicationWindow"
     allowedOrientations: Orientation.LandscapeMask
@@ -26,6 +28,8 @@ ApplicationWindow {
 
             Binding { target: app; property: "levelName"; value: gamePage.levelName }
             Binding { target: app; property: "score"; value: gamePage.score }
+            Binding { target: app; property: "levelTitle"; value: gamePage.levelTitle }
+            Binding { target: app; property: "thumbnail"; value: gamePage.thumbnail }
         }
     }
 

@@ -37,6 +37,18 @@ int Zuma::score() const
     return m_game ? m_game->score() : -1;
 }
 
+QString Zuma::levelTitle() const
+{
+    return m_game ? QStringLiteral("LEVEL %1-%2").arg(m_game->levelIndex() + 1).arg(m_game->difficulty() + 1)
+                  : QString();
+}
+
+// The level being played or selected in the menu
+QString Zuma::thumbnail() const
+{
+    return m_engine.path(Assets::thumbnailPath(m_game ? m_game->levelIndex() : m_menu.level()));
+}
+
 void Zuma::setPaused(bool paused)
 {
     if (paused && m_game)
@@ -73,8 +85,9 @@ void Zuma::update()
         break;
     }
 
-    if (score() != m_reportedScore) {
+    if (score() != m_reportedScore || thumbnail() != m_reportedThumbnail) {
         m_reportedScore = score();
+        m_reportedThumbnail = thumbnail();
         emit statusChanged();
     }
 }

@@ -1,3 +1,6 @@
+* Wed Oct 21 2026 Kirill Koleno <kln0x6b@support.ru> - 1.0.1-1
+- Application cover shows the current level, its score and progress
+
 * Wed Oct 21 2026 Kirill Koleno <kln0x6b@support.ru> - 1.0-1
 - First release of the Zuma Deluxe HD port for Aurora OS 5.1 and newer
 - Native Qt Quick renderer, audio mixer and touch controls

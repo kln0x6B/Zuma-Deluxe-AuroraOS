@@ -25,6 +25,8 @@ public:
 
     QString levelName() const;
     int score() const;
+    QString levelTitle() const;
+    QString thumbnail() const;
 
     void setPaused(bool paused);
 
@@ -48,6 +50,7 @@ private:
     State m_state = State::Broken;
     double m_splashStart = 0;
     int m_reportedScore = -1;
+    QString m_reportedThumbnail;
 };
 
 #endif // ZUMA_H

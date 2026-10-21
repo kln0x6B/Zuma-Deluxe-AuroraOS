@@ -69,6 +69,7 @@ bool load(Engine &engine);
 void playMusic(Engine &engine, Music music);
 
 inline int thumbnail(int level) { return FirstThumbnailTexture + level; }
+QString thumbnailPath(int level);
 
 }
 

@@ -1,6 +1,6 @@
 Name:       ru.kln0x6b.AurZuma
 Summary:    Port of the Zuma Deluxe HD game to Aurora OS
-Version:    1.0
+Version:    1.0.1
 Release:    1
 License:    MIT
 URL:        https://github.com/kln0x6B/Zuma-Deluxe-AuroraOS

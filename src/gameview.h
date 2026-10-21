@@ -6,6 +6,7 @@
 
 #include <QElapsedTimer>
 #include <QQuickItem>
+#include <QUrl>
 
 #include <memory>
 
@@ -21,6 +22,8 @@ class GameView : public QQuickItem
     Q_PROPERTY(bool active READ isActive WRITE setActive NOTIFY activeChanged)
     Q_PROPERTY(QString levelName READ levelName NOTIFY statusChanged)
     Q_PROPERTY(int score READ score NOTIFY statusChanged)
+    Q_PROPERTY(QString levelTitle READ levelTitle NOTIFY statusChanged)
+    Q_PROPERTY(QUrl thumbnail READ thumbnail NOTIFY statusChanged)
 
 public:
     explicit GameView(QQuickItem *parent = nullptr);
@@ -31,6 +34,8 @@ public:
 
     QString levelName() const;
     int score() const;
+    QString levelTitle() const;
+    QUrl thumbnail() const;
 
 signals:
     void activeChanged();

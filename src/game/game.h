@@ -28,6 +28,8 @@ public:
     bool isValid() const { return m_level->isValid(); }
     bool isFinished() const { return m_finished; }
     int score() const { return m_score; }
+    int levelIndex() const { return m_levelIndex; }
+    int difficulty() const { return m_difficulty; }
     QString levelName() const { return m_level->info().displayName; }
 
     void pause();

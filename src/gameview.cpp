@@ -80,6 +80,16 @@ int GameView::score() const
     return m_zuma ? m_zuma->score() : -1;
 }
 
+QString GameView::levelTitle() const
+{
+    return m_zuma ? m_zuma->levelTitle() : QString();
+}
+
+QUrl GameView::thumbnail() const
+{
+    return m_zuma ? QUrl::fromLocalFile(m_zuma->thumbnail()) : QUrl();
+}
+
 void GameView::itemChange(ItemChange change, const ItemChangeData &data)
 {
     if (change == ItemSceneChange) {

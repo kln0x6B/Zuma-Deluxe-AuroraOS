@@ -10,6 +10,8 @@ Page {
 
     property alias levelName: gameView.levelName
     property alias score: gameView.score
+    property alias levelTitle: gameView.levelTitle
+    property alias thumbnail: gameView.thumbnail
 
     objectName: "gamePage"
     allowedOrientations: Orientation.LandscapeMask

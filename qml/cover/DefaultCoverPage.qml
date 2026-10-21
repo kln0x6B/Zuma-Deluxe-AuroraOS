@@ -9,10 +9,20 @@ CoverBackground {
 
     objectName: "defaultCover"
 
+    Image {
+        objectName: "levelThumbnail"
+        anchors.fill: parent
+        source: app.thumbnail
+        sourceSize { width: width; height: height }
+        fillMode: Image.PreserveAspectCrop
+        opacity: 0.35
+    }
+
     CoverTemplate {
         objectName: "applicationCover"
         primaryText: playing ? app.score.toString() : "Zuma"
         secondaryText: playing ? app.levelName : "Deluxe HD"
+        description: app.levelTitle
         icon {
             source: Qt.resolvedUrl("../icons/AurZuma.png")
             sourceSize { width: icon.width; height: icon.height }

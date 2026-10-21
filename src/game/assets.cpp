@@ -83,8 +83,8 @@ bool load(Engine &engine)
     QStringList textures;
     for (const char *path : Images)
         textures << QLatin1String(path);
-    for (int level = 1; level <= ThumbnailCount; ++level)
-        textures << QStringLiteral("images/thumbnails/%1.jpg").arg(level, 2, 10, QLatin1Char('0'));
+    for (int level = 0; level < ThumbnailCount; ++level)
+        textures << thumbnailPath(level);
 
     QStringList fonts;
     for (const char *path : Fonts)
@@ -97,6 +97,11 @@ bool load(Engine &engine)
     return loadAll(textures, [&](const QString &path) { return engine.loadTexture(path); })
             && loadAll(fonts, [&](const QString &path) { return engine.loadFont(path); })
             && loadAll(sounds, [&](const QString &path) { return engine.loadSound(path); });
+}
+
+QString thumbnailPath(int level)
+{
+    return QStringLiteral("images/thumbnails/%1.jpg").arg(level + 1, 2, 10, QLatin1Char('0'));
 }
 
 void playMusic(Engine &engine, Music music)
